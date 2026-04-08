@@ -368,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomLinkedList
   Count: 0
+  CurrentEnemies: []
   EnemyPrefab: {fileID: 0}
 --- !u!4 &1634241297
 Transform:
@@ -413,8 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d41b2d79364ea314ca7df04af9ce4cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  enemyPref: {fileID: 5958365295168367172, guid: 640a12d90b2a9e44993af143b87015c1, type: 3}
-  HordaManagment: {fileID: 1634241296}
+  Inputs: []
 --- !u!4 &1868119561
 Transform:
   m_ObjectHideFlags: 0

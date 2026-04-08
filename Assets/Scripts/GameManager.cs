@@ -5,15 +5,20 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    //public LinkedList<string> ListaDeNombres = new();
+    /*public LinkedList<string> ListaDeNombres = new();
 
     public Enemy enemyPref;
 
     public CustomLinkedList HordaManagment;
 
 
-    public List<NodeOfHorde> Nodes;
-    void Start()
+    public List<NodeOfHorde> Nodes;*/
+
+    public List<string> Inputs = new List<string>();
+    public DoubleLinkedList<string> Names = new();
+    public CircularDoubleLinkedList<string> Dialogues = new();
+
+    /*void Start()
     {
         HordaManagment.Set(enemyPref);
 
@@ -79,5 +84,24 @@ public class GameManager : MonoBehaviour
     {
         //NodeOfHorde hordaA = new();
         HordaManagment.SpawnHorde();
+    }*/
+
+  
+    private void Start()
+    {
+        foreach (var input in Inputs)
+        {
+            Names.Add(input);
+            Dialogues.Add(input);
+        }
     }
+
+    [Button]
+    public void ShowDoubleList()
+    {
+        Names.TraverseInOrder(value  => Debug.Log(value.Value));
+        Dialogues.TraverseInReverse(value => Debug.Log(value.Value));
+
+    }
+
 }
