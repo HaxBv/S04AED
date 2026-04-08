@@ -5,6 +5,7 @@ public class Node<T>
     private T value = default;
 
     private Node<T> next;
+    private Node<T> prev;
 
     public Node (T value)
     {
@@ -14,6 +15,13 @@ public class Node<T>
     {
         this.next = next;
     }
+
+    public void SetPrev(Node<T> prev)
+    {
+        this.prev = prev;
+    }
     public Node<T> Next => next;
+
+    public Node<T> Prev => prev;
     public T Value => value;
 }

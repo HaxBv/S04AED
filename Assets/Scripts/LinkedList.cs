@@ -8,6 +8,8 @@ public class LinkedList<T> : MonoBehaviour
     public Node<T> head = null;
     public int Count;
 
+
+    //->0(n)
     public virtual void Add(T value)
     {
         Node<T> tempNode = new(value);
@@ -31,6 +33,7 @@ public class LinkedList<T> : MonoBehaviour
         }
         Count++;
     }
+
 
     //->O(n)
     public void RemoveLast()
